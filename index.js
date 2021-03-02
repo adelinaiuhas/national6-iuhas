@@ -39,6 +39,10 @@ setTimeout(function() {
     console.log("Fifth");
 }, 1);
 
-setInterval(function() {
+const pingReference = setInterval(function() {
     console.log("ping");
 },1000);
+
+document.getElementById("stop-ping").addEventListener('click', function() {
+    clearInterval(pingReference);
+});
