@@ -18,7 +18,7 @@ document.getElementById("stop").addEventListener('click', myStopFunction);
 document.getElementById("reset").addEventListener('click', myResetFunction);
 
 document.getElementById("save").addEventListener('click', mySaveFunction);
-    //console.log('The time is:', `${hours}:${minutes}:${seconds}`);
+
 
 var myVar;
 function myStartFunction() {
@@ -66,8 +66,7 @@ function myResetFunction () {
 
 
 function mySaveFunction() {
-    clearInterval(myVar);
-    
+        
     const mySavedTime = document.createElement("div");
     const firstDigitHours = document.createElement("p");
     const secondDigitHours = document.createElement("p");
