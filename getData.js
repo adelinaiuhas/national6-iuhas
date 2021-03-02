@@ -1,13 +1,16 @@
 console.log("JavaScript - AJAX"); // Javascript Object Notation
+console.log("Crud Operations - Create");
+document.getElementById("get-data").addEventListener("click", getData);
 
-document.getElementById("get-data").addEventListener("click", function(){
+
+function getData(){
 
 console.log("before fetch");
 fetch("https://simple-json-server-scit.herokuapp.com/posts")
 .then(handleFetchResponse)
 .then(useJSONResponse);
 console.log("after fetch");
-});
+};
 
 function handleFetchResponse(response) {
     console.log("response", response);
