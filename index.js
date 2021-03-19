@@ -20,7 +20,7 @@ function getData() {
         return postData(addedTask);
       }
     })
-    .then(renderToDoList());
+    .then(() => renderToDoList());
 }
 
 function postData(addedTask) {
@@ -35,7 +35,7 @@ function postData(addedTask) {
         }
       ],
     }
-    
+
     return fetch('https://simple-json-server-scit.herokuapp.com/todo', {
       method: "POST",
       headers: {
@@ -47,7 +47,8 @@ function postData(addedTask) {
 
 }
 
-function putData (addedTask, data){
+function putData(addedTask, data) {
+  if (addedTask) {
   const newTask = {
     checked: false,
     item: addedTask
@@ -60,26 +61,26 @@ function putData (addedTask, data){
     },
     body: JSON.stringify(data)
   });
-
+}
 }
 
 
 function renderToDoList() {
   fetch("https://simple-json-server-scit.herokuapp.com/todo/aiuhas")
-  .then(r => r.json())
-  .then ((data) => {
-    console.log(data);
-    taskListHtml.innerHTML = "";
-    if (data.todo) {
-    for (const taskItem of data.todo) {
-      renderToDoTask(taskItem);
-    }
-  }
-  })
- 
+    .then(r => r.json())
+    .then((data) => {
+      console.log(data);
+      taskListHtml.innerHTML = "";
+      if (data.todo) {
+        for (const taskItem of data.todo) {
+          renderToDoTask(taskItem, data);
+        }
+      }
+    })
+
 }
 
-function renderToDoTask(taskItem) {
+function renderToDoTask(taskItem, data) {
   console.log(taskItem);
   const task = document.createElement("div");
   task.classList.add("taskStyle");
@@ -98,14 +99,31 @@ function renderToDoTask(taskItem) {
 
   removeArticle.addEventListener("click", function () {
     console.log("remove element");
-  
+
     task.remove();
-    fetch(
-      "https://simple-json-server-scit.herokuapp.com/todo/aiuhas",
-      {
-        method: "DELETE",
-      }
-    )
+    deleteData(taskItem.item, data);
+    
   });
 
+}
+
+function deleteData (item, data) {
+  
+  const index = data.todo.findIndex((task) => {
+    console.log(task.item, item);
+    return task.item === item
+  });
+  console.log(index);
+  data.todo.splice(index, 1);
+
+  fetch(
+    "https://simple-json-server-scit.herokuapp.com/todo/aiuhas",
+    {
+      method: "PUT",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }
+  )
 }
