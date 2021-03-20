@@ -49,19 +49,19 @@ function postData(addedTask) {
 
 function putData(addedTask, data) {
   if (addedTask) {
-  const newTask = {
-    checked: false,
-    item: addedTask
-  };
-  data.todo.push(newTask);
-  return fetch("https://simple-json-server-scit.herokuapp.com/todo/aiuhas", {
-    method: "PUT",
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  });
-}
+    const newTask = {
+      checked: false,
+      item: addedTask
+    };
+    data.todo.push(newTask);
+    return fetch("https://simple-json-server-scit.herokuapp.com/todo/aiuhas", {
+      method: "PUT",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+  }
 }
 
 
@@ -86,6 +86,7 @@ function renderToDoTask(taskItem, data) {
   task.classList.add("taskStyle");
   const checkedLi = document.createElement("input");
   checkedLi.setAttribute("type", "checkbox");
+
   const taskContent = document.createElement("p");
   const removeArticle = document.createElement("div");
   removeArticle.innerHTML = trashSvg;
@@ -98,17 +99,35 @@ function renderToDoTask(taskItem, data) {
   taskContent.innerText = taskItem.item;
 
   removeArticle.addEventListener("click", function () {
-    console.log("remove element");
-
     task.remove();
     deleteData(taskItem.item, data);
-    
+
   });
+  checkedLi.addEventListener("click", function() {
+    if (checkedLi.checked === true) {
+      taskItem.checked = true;
+      return fetch("https://simple-json-server-scit.herokuapp.com/todo/aiuhas", {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+    } else if (checkedLi.checked === false){
+      taskItem.checked = false;
+      return fetch("https://simple-json-server-scit.herokuapp.com/todo/aiuhas", {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+    }
+  })
+ }
 
-}
+function deleteData(item, data) {
 
-function deleteData (item, data) {
-  
   const index = data.todo.findIndex((task) => {
     console.log(task.item, item);
     return task.item === item
@@ -126,4 +145,26 @@ function deleteData (item, data) {
       body: JSON.stringify(data)
     }
   )
+}
+
+document.addEventListener("DOMContentLoaded", onContentLoad);
+
+function onContentLoad() {
+  fetchData()
+    .then(data => renderContent(data));
+}
+
+function fetchData() {
+  return fetch("https://simple-json-server-scit.herokuapp.com/todo/aiuhas")
+
+    .then((r) => r.json())
+    .then((data) => data);
+}
+
+function renderContent(data) {
+
+  data.todo.forEach(data => {
+    console.log(data);
+    renderToDoList(data);
+  });
 }
