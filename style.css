@@ -1,0 +1,9 @@
+#generate-spaceship {
+    display: block;
+  }
+  
+  .spaceship {
+    height: 50px;
+    display: block;
+    margin: 10px;
+  }
