@@ -1,6 +1,38 @@
 console.log("OOP Game");
 
-//"GameObject" is a base class
+var sourceLive = ["heart.png", "heart.png","heart.png"];
+let i;
+
+class Lives {
+  constructor() {
+    this.refs = [];
+    this.generateLive();
+  }
+
+  generateLive() {
+    for (var i = 0; i < sourceLive.length; i++) {
+      this.ref = document.createElement("img");
+      this.ref.src = sourceLive[i] ;
+      this.ref.classList.add("lives");
+      document.body.appendChild(this.ref);
+      console.log(this.ref);
+      this.refs.push(this.ref);
+      console.log(this.refs);
+    };
+}
+
+
+  decreaseLive() {
+  
+    this.refs[this.refs.length - 1].remove();
+  }
+}  
+
+var lives = new Lives();
+
+console.log(lives);
+
+//"GameObject" is; a base class
 // every object in our game will have width, height, position and can move
 class GameObject {
   constructor() {
@@ -148,9 +180,10 @@ document.addEventListener("keyup", (event) => {
 
 // -- Collision Detection
 // without a way to detect with the player overlaps one of the obstacles the game will not end
+var collisionNr = 0;
 function collisionDetection(player, obstacles) {
   for (const obstacle of obstacles) {
-    console.log(player.x, obstacle.x);
+    //console.log(player.x, obstacle.x);
 
     if (
       (player.x <= obstacle.x &&
@@ -163,8 +196,9 @@ function collisionDetection(player, obstacles) {
         obstacle.y + obstacle.height <= player.y + player.height)
     )
       return true;
+      collisionNr++;
   }
-
+  collisionNr = 0;
   return false;
 }
 
@@ -181,7 +215,7 @@ let count = 0;
 // our objects method will be called at the interval callback
 
 let gameLoop = setInterval(() => {
-  console.log(keyUpPress);
+  //console.log(keyUpPress);
 
   // depending on the values of "keyUpPress" or "keyDownPress" we update the player position
   if (keyUpPress) player.moveUp();
@@ -194,14 +228,18 @@ let gameLoop = setInterval(() => {
   obstacleFactory.moveObstacles();
 
   // if the player collide with any of the obstacles we need to close the game loops, alert the user and refresh the game
+
   if (collisionDetection(player, obstacleFactory.obstacles)) {
-    clearInterval(gameLoop);
-    alert("You hit an obstacle");
-    window.location = "/";
+     lives.decreaseLive(this.ref);
   }
+
+  // clearInterval(gameLoop);
+  // alert("You hit an obstacle");
+  // window.location = "/";
 
   // we check every game loop if we need to destroy objects outside of the game scene
   obstacleFactory.destroyObstacles();
 
   count++;
 }, 50);
+
