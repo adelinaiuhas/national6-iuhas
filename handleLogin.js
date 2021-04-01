@@ -7,8 +7,9 @@ document.getElementById("login").addEventListener("click", () => {
     const password = inputPassword.value;
 
     if (name && password === PASSWORD_CHECK) {
-        document.cookie = `name=${name}`;
-        document.cookie = `password=${password}`;
+
+        localStorage.setItem("name", name);
+        localStorage.setItem("password", password);
         window.location = "/";
     }
 });
