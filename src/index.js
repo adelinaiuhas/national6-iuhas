@@ -1,11 +1,11 @@
-console.log("Entry point to webpack");
-import { addPixel, addPercentage } from "./utils/addUnitsType";
+import { renderArticles } from "./article";
+import { getApiPostData } from "./utils/api";
 
-const aRandomNumber = Math.floor(Math.random() * 20);
-console.log(aRandomNumber);
+console.log("JavaScript - AJAX - CRUD - Homework - Solution"); 
 
-const aRandomNumberWithPixel = addPixel(aRandomNumber);
+document.getElementById("get-data").addEventListener("click", () => {
+    getApiPostData(renderArticles);
+});
 
-console.log(aRandomNumberWithPixel);
-const aRandomNumberWithPercentage = addPercentage(aRandomNumber);
-console.log(aRandomNumberWithPercentage);
+
+
