@@ -11,27 +11,26 @@ document.getElementById("logout").addEventListener("click", () => {
 });
 
 const allBreeds = document.getElementById("breeds");
+const images = document.getElementById("images-container");
 window.addEventListener("load", getData);
 
 function getData() {
-    fetch("https://dog.ceo/api/breeds/list/all")
+  fetch("https://dog.ceo/api/breeds/list/all")
     .then((response) => response.json())
     .then((json) => useJSONResponse(json));
 }
 
 function useJSONResponse(json) {
   var breedNamesObjects = Object.values(json);
-  console.log(breedNamesObjects[0]);
   var breedNamesObject = breedNamesObjects[0];
   var breedListArray = Object.keys(breedNamesObject);
-  console.log(breedListArray);
+  
   renderBreedNames(breedListArray);
+  useIndexOf(breedListArray)
 }
 
 function renderBreedNames(breedList) {
-
   for (const breedName of breedList) {
-    console.log(breedName);
     renderBreedName(breedName);
   }
 }
@@ -39,5 +38,42 @@ function renderBreedNames(breedList) {
 function renderBreedName(breedName) {
   const breed = document.createElement("p");
   allBreeds.appendChild(breed);
-  breed.innerHTML = breedName;
+  breed.innerText = breedName;
+  breed.classList.add("breedName");
 }
+
+var xParagraph = document.getElementsByClassName("BreedName");
+function useIndexOf(breedList){
+  var x = breedList;
+  
+  allBreeds.addEventListener("click", function(e) {
+    
+    var p = e.target.parentElement;
+    var index = Array.prototype.indexOf.call(p.children, e.target);
+    console.log(index);
+    
+    e.target.classList.add("underlinedText");
+    
+    fetch(`https://dog.ceo/api/breed/${x[index]}/images`)
+    .then((response) => response.json())
+    .then((json) => useJSONResponseImage(json));
+    
+    
+    function useJSONResponseImage() {
+      
+    }
+  });
+
+  
+
+  
+}
+
+
+
+
+
+
+
+
+
