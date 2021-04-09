@@ -24,9 +24,7 @@ function useJSONResponse(json) {
   var breedNamesObjects = Object.values(json);
   var breedNamesObject = breedNamesObjects[0];
   var breedListArray = Object.keys(breedNamesObject);
-  
   renderBreedNames(breedListArray);
-  useIndexOf(breedListArray)
 }
 
 function renderBreedNames(breedList) {
@@ -35,39 +33,53 @@ function renderBreedNames(breedList) {
   }
 }
 
-function renderBreedName(breedName) {
+function renderBreedName(breedName, e) {
   const breed = document.createElement("p");
   allBreeds.appendChild(breed);
   breed.innerText = breedName;
   breed.classList.add("breedName");
-}
-
-var xParagraph = document.getElementsByClassName("BreedName");
-function useIndexOf(breedList){
-  var x = breedList;
-  
-  allBreeds.addEventListener("click", function(e) {
-    
+  breed.addEventListener ("click", function(e) {
     var p = e.target.parentElement;
     var index = Array.prototype.indexOf.call(p.children, e.target);
-    console.log(index);
-    
-    e.target.classList.add("underlinedText");
-    
-    fetch(`https://dog.ceo/api/breed/${x[index]}/images`)
-    .then((response) => response.json())
+    var dogBreed = p.children[index].innerText;
+    this.classList.add("underlinedText");
+    fetch(`https://dog.ceo/api/breed/${dogBreed}/images`)
+    .then((r) => r.json())
     .then((json) => useJSONResponseImage(json));
     
     
-    function useJSONResponseImage() {
-      
+    function useJSONResponseImage(json) {
+      var breedImagesObjects = Object.values(json);
+      var breedImageObject = breedImagesObjects[0];
+      renderBreedImages(breedImageObject);
+  
+    }
+
+    function renderBreedImages (image){
+      const imageBreed = document.createElement("img");
+      images.appendChild(imageBreed);
+      imageBreed.src = image[0];
     }
   });
 
-  
+}
+
+
+    
+
+//     console.log(abc.length);
+//     // for (var index = 0; index < abc.length; index++) {
+//     //   abc[index].addEventListener("click", function() {
+//     //     (document.querySelector('.underlinedText')) ? document.querySelector('.underlinedText').classList.remove('underlinedText') : '';
+//     //     this.classList.add('underlinedText');
+//     //   });
+//     // } 
+    
+
+
 
   
-}
+
 
 
 
