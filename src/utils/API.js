@@ -3,11 +3,10 @@ const BASE_URL = "https://simple-json-server-scit.herokuapp.com/todo/";
 const GET_DATA_URL = BASE_URL + USER;
 const UPDATE_DATA_URL = GET_DATA_URL;
 
-
 export function getToDoData(callback) {
     fetch(GET_DATA_URL)
-        .then(r => r.json())
-        .then(json => callback(json));
+        .then((r) => r.json())
+        .then((json) => callback(json));
 }
 
 export function updateUserData(todo, callback) {
@@ -15,10 +14,11 @@ export function updateUserData(todo, callback) {
         id: USER,
         todo: todo,
     };
+
     fetch(UPDATE_DATA_URL, {
         method: "PUT",
         headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
     }).then(() => {
@@ -36,15 +36,14 @@ export function createUserData(itemValue, callback) {
             },
         ],
     };
+
     fetch(BASE_URL, {
         method: "POST",
         headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
     }).then(() => {
         getToDoData(callback);
     });
 }
-
-
