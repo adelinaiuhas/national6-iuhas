@@ -1,6 +1,6 @@
 import menuSvg from "./menu.svg";
-//import "./AppLogo.css";
-export function menuLogo() {
+import "./MenuButton.css";
+export function MenuButton() {
   return (
     <div className="app-menu-button">
       <img src={menuSvg} alt="button" />
