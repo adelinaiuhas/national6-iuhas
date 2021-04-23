@@ -1,0 +1,17 @@
+.app-menu-flyout {
+  display: inline-block;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-right: 1px solid grey;
+}
+
+.app-menu-flyout p {
+  margin-left: 5px;
+
+  display: flex;
+  align-items: center;
+}

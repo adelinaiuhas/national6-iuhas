@@ -1,5 +1,5 @@
 import "./MenuFlyOut.css";
-export function handleFlyOut() {
+export function MenuFlyOut() {
   return (
     <div className="app-menu-flyout">
       <p>about</p>
