@@ -1,5 +1,4 @@
 import { MenuButton } from "./MenuButton/MenuButton";
-import { MenuFlyOut } from "./MenuFlyout/MenuFlyOut";
 
 import "./Menu.css";
 
@@ -8,7 +7,6 @@ export function Menu() {
     <div className="app-menu">
       {" "}
       <MenuButton />
-      <MenuFlyOut />
     </div>
   );
 }
