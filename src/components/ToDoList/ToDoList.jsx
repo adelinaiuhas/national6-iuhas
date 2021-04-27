@@ -20,6 +20,7 @@ export class ToDoList extends Component {
   state = {
     toDoList: mockToDoListData,
     inputValue: "",
+    shouldCreateUser: false,
   };
   removeItem = (itemText) => {
     this.setState({
@@ -28,6 +29,24 @@ export class ToDoList extends Component {
       ),
     });
   };
+
+  componentDidMount() {
+    console.log("ToDoList has finished mounting");
+    fetch("https://simple-json-server-scit.herokuapp.com/todo/aiuhas")
+      .then((r) => r.json())
+      .then((json) => {
+        console.log(json);
+        if (json.todo) {
+          this.setState({ toDoList: json.todo });
+        } else {
+          this.setState({ shouldCreateUser: true });
+        }
+      });
+  }
+
+  componentWillUnmount() {
+    console.log("ToDoList will be unmounted");
+  }
   handleInputChange = (event) => {
     this.setState({ inputValue: event.target.value });
   };
@@ -42,6 +61,7 @@ export class ToDoList extends Component {
   };
 
   render() {
+    console.log("ToDoList -render");
     console.log(this.state);
     return (
       <div className="to-do-list">
