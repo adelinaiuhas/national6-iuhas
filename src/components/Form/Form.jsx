@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { FormField } from "./FormField copy/FormField";
+import { FormField } from "./FormField/FormField";
 import { FormMessage } from "./FormMessage/FormMessage";
 import { SendButton } from "./SendButton/SendButton";
 
