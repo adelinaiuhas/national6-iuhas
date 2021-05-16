@@ -1,6 +1,4 @@
 export function About() {
-  console.log("About render");
-
   return (
     <div className="about">
       <h2>To Do App Info</h2>

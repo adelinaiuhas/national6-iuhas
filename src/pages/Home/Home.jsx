@@ -1,9 +1,37 @@
-import { Component } from "react";
-import background from "./background.jpg";
+import React, { Component } from "react";
+import myself from "./me.jpg";
 import "./Home.css";
 
+const textArray = ["Senior Planner", "Junior Web Developer"];
 export class Home extends Component {
+  constructor() {
+    super();
+    this.state = { textIdx: 0 };
+  }
+
+  componentDidMount() {
+    this.timeout = setInterval(() => {
+      let currentIdx = this.state.textIdx;
+      this.setState({ textIdx: currentIdx + 1 });
+    }, 1500);
+  }
+
+  componentDidUnmount() {
+    clearInterval(this.timeout);
+  }
+
   render() {
-    return <img src={background} alt="home" className="home" />;
+    let textThatChanges = textArray[this.state.textIdx % textArray.length];
+
+    return (
+      <div className="about-container">
+        <img src={myself} alt="myself" />
+        <h2 className="my-name">Adelina Iuhas</h2>
+
+        <p className="what-I-do">
+          I am a <span>{textThatChanges}</span>
+        </p>
+      </div>
+    );
   }
 }
