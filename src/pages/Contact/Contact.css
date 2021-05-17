@@ -1,0 +1,10 @@
+.contact-container {
+  border-radius: 20px;
+  height: 500px;
+  width: 500px;
+  margin-left: 30%;
+  margin-right: 40%;
+  margin-top: 25px;
+  background-color: rgb(56, 151, 163);
+  color: white;
+}

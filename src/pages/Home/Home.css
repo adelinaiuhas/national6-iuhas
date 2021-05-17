@@ -1,16 +1,13 @@
-.about-container {
+.home-container {
   margin-left: 30%;
   margin-right: 40%;
   margin-top: 10%;
   color: white;
 }
 
-.about-container img {
+.home-container img {
   width: 200px;
   align-items: center;
-  /* margin-left: 30%;
-  margin-right: 40%;
-  margin-top: 10%; */
   border-radius: 50%;
 }
 

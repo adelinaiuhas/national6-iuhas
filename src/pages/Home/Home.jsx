@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import myself from "./me.jpg";
 import "./Home.css";
 
-const textArray = ["Senior Planner", "Junior Web Developer"];
+const textArray = ["Senior Demand Planner", "Junior Web Developer"];
 export class Home extends Component {
   constructor() {
     super();
@@ -24,7 +24,7 @@ export class Home extends Component {
     let textThatChanges = textArray[this.state.textIdx % textArray.length];
 
     return (
-      <div className="about-container">
+      <div className="home-container">
         <img src={myself} alt="myself" />
         <h2 className="my-name">Adelina Iuhas</h2>
 
