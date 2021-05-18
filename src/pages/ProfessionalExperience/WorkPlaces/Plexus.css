@@ -1,0 +1,12 @@
+.plexus {
+  display: grid;
+  background-color: rgb(72, 160, 163);
+  top: 0;
+  margin-left: 500px;
+  width: 500px;
+  height: 400px;
+  /* position: relative; */
+  border-right: 1px solid grey;
+  border-radius: 10px;
+  padding: 20px;
+}
