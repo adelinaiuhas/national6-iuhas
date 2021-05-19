@@ -1,10 +1,50 @@
 import "./Projects.css";
+import html from "./html5.svg";
+import css from "./css-3.svg";
+import js from "./java-script-logo.svg";
+import react from "./logo.svg";
 export function Projects() {
   return (
     <div className="projects-container">
-      <h2>To Do App Info</h2>
-      <p>This app will store your task on server</p>
-      <p>Awesome</p>
+      <h2>Language skills</h2>
+      <br />
+      <div className="level">
+        {" "}
+        <h3 className="beginner">Beginner</h3>
+        <h3 className="advanced">Advanced</h3>
+      </div>
+      <br />
+      <p>English</p>
+
+      <hr style={{ width: "100%" }} />
+      <p>French</p>
+      <hr style={{ width: "60%" }} />
+      <p>Spanish</p>
+      <hr style={{ width: "30%" }} />
+      <br />
+      <h2>Programming language skills</h2>
+      <br />
+      <div className="level">
+        {" "}
+        <h3 className="beginner">Beginner</h3>
+        <h3 className="advanced">Advanced</h3>
+      </div>
+      <br />
+      <img src={html} style={{ width: "5%" }} alt="html" />
+      <hr style={{ width: "100%" }} />
+      <img src={js} style={{ width: "6%" }} alt="js" />
+      <hr style={{ width: "80%" }} />
+      <img src={css} style={{ width: "6%" }} alt="css" />
+      <hr style={{ width: "70%" }} />
+
+      <img
+        src={react}
+        style={{ width: "10%", marginLeft: "-10px" }}
+        alt="react"
+      />
+      <hr style={{ width: "40%" }} />
+      <br />
+      <h2>Programming project</h2>
     </div>
   );
 }

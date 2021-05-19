@@ -13,7 +13,7 @@ export function Header() {
         <Link to="/about">About Me</Link>
         <Link to="/education">Education</Link>
         <Link to="/experience">Professional Experience</Link>
-        <Link to="/projects">Projects</Link>
+        <Link to="/projects">Skills and projects</Link>
         <Link to="/contact">Contact</Link>
       </div>
     </div>

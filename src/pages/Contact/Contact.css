@@ -7,4 +7,13 @@
   margin-top: 25px;
   background-color: rgb(56, 151, 163);
   color: white;
+  padding: 10px;
+}
+.contact-container label {
+  display: block;
+  padding: 20px;
+}
+.contact-container .btn {
+  display: block;
+  padding: 20px;
 }

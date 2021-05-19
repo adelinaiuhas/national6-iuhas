@@ -7,4 +7,15 @@
   margin-top: 25px;
   background-color: rgb(56, 151, 163);
   color: white;
+  padding: 10px;
+}
+.level {
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+}
+
+.projects-container p {
+  font-size: 20px;
 }

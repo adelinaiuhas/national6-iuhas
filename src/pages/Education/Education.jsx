@@ -11,18 +11,18 @@ export function Education() {
         Babes-Bolyai University, Faculty of Economics and Business
         Administration, Cluj-Napoca, Romania
       </p>
-      <p>MASTER IN ENTREPRENEURSHIP AND BUSINESS MANAGEMENT</p>
+      <p>Master in entrepreneurship and business management</p>
       <br />
       <h2>02/Feb/2009 - 29/Jun/2009</h2>
       <p>Windesheim University, The School of Management and Law</p>
-      <p>ERASMUS STUDENT</p>
+      <p>ERASMUS student</p>
       <br />
       <h2>2006 - 2009</h2>
       <p>
         Babes-Bolyai University, Faculty of Economics and Business
-        Administration, Cluj-Napoca, Romania Other language(
+        Administration, Cluj-Napoca, Romania
       </p>
-      <p>MAJOR IN MANAGEMENT</p>
+      <p>Major in management</p>
     </div>
   );
 }
