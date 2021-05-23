@@ -33,7 +33,7 @@ export function About() {
       </p>
       <p>Address: Slatinei street, no 11, 410291, Oradea, Romania</p>
       <br />
-      <div class="logo">
+      <div className="logo">
         <a
           href="https://www.linkedin.com/in/adelina-iuhas-65138611/"
           target="_blank"
@@ -44,7 +44,7 @@ export function About() {
             focusable="false"
             data-prefix="fab"
             data-icon="linkedin"
-            class="svg-inline--fa fa-linkedin fa-w-14 fa-4x linkedIn"
+            className="svg-inline--fa fa-linkedin fa-w-14 fa-4x linkedIn"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -66,7 +66,7 @@ export function About() {
             focusable="false"
             data-prefix="fab"
             data-icon="github"
-            class="svg-inline--fa fa-github fa-w-16 fa-4x gitHub"
+            className="svg-inline--fa fa-github fa-w-16 fa-4x gitHub"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512"

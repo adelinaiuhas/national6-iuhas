@@ -22,7 +22,7 @@ export function Projects() {
       <p>Spanish</p>
       <hr style={{ width: "30%" }} />
       <br />
-      <h2>Programming language skills</h2>
+      <h2>Programming skills</h2>
       <br />
       <div className="level">
         {" "}

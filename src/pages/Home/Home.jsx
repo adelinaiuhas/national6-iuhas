@@ -16,7 +16,7 @@ export class Home extends Component {
     }, 1500);
   }
 
-  componentDidUnmount() {
+  componentWillUnmount() {
     clearInterval(this.timeout);
   }
 
@@ -29,7 +29,7 @@ export class Home extends Component {
         <h2 className="my-name">Adelina Iuhas</h2>
 
         <p className="what-I-do">
-          I am a <span>{textThatChanges}</span>
+          <span>{textThatChanges}</span>
         </p>
       </div>
     );

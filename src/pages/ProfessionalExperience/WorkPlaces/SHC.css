@@ -1,9 +1,7 @@
 .shc {
   background-color: rgb(72, 160, 163);
-  margin-top: -125px;
-  margin-left: 400px;
-  width: fit-content;
-  height: fit-content;
+
+  width: 75%;
   position: absolute;
   border-right: 1px solid grey;
   border-radius: 10px;

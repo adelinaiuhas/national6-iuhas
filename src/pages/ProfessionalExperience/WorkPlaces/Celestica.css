@@ -1,9 +1,6 @@
 .celestica {
   background-color: rgb(72, 160, 163);
-  margin-top: -100px;
-  margin-left: 400px;
-  width: 500px;
-  height: 400px;
+  width: 75%;
   position: absolute;
   border-right: 1px solid grey;
   border-radius: 10px;

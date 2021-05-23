@@ -7,7 +7,7 @@ export function Header() {
   return (
     <div className="cv-header">
       <Photo />
-      <p className="cv-header-title">Adelina Iuhas</p>
+
       <div className="navigation">
         <Link to="/">Home</Link>
         <Link to="/about">About Me</Link>

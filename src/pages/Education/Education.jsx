@@ -3,7 +3,7 @@ export function Education() {
   return (
     <div className="education-container">
       <h2>12/Jan/2021 - 13/May/2021</h2>
-      <p>Scoala Informala de IT - JUNIOR DEVELOPER</p>
+      <p>Scoala Informala de IT - Junior Developer</p>
       <p>HTML, CSS, JavaScript, React</p>
       <br />
       <h2>2009 - 2011</h2>

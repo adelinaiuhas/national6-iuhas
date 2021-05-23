@@ -21,10 +21,8 @@ export function ProfessionalExperience() {
         Plexus
       </h2>
       {isShown1 && <Plexus />}
-      <p>01/Aug/2019 - Ongoing</p>
-      <p>Demand analyst SR</p>
-      <p>04/Apr/2017 - 31/Jul/2019</p>
-      <p>Demand analyst II</p>
+      <p>01/Aug/2019 - Ongoing: Demand analyst SR </p>
+      <p>04/Apr/2017 - 31/Jul/2019: Demand analyst II</p>
       <br />
       <h2
         onMouseEnter={() => setIsShown2(true)}
@@ -33,10 +31,9 @@ export function ProfessionalExperience() {
         Celestica IPC
       </h2>
       {isShown2 && <Celestica />}
-      <p>28/Apr/2016 - 31/Mar/2017</p>
-      <p>Commodity management analyst</p>
-      <p>07/Jan/2015 - 28/Apr/2016</p>
-      <p>Commodity management associate</p>
+      <p>28/Apr/2016 - 31/Mar/2017: Commodity management analyst</p>
+
+      <p>07/Jan/2015 - 28/Apr/2016: Commodity management associate</p>
 
       <br />
       <h2
@@ -46,8 +43,7 @@ export function ProfessionalExperience() {
         Shinheung Electronics
       </h2>
       {isShown3 && <SHC />}
-      <p>09/Apr/2021 - 05/Jan/2015</p>
-      <p>Buyer</p>
+      <p>09/Apr/2021 - 05/Jan/2015: Buyer</p>
 
       <br />
       <h2
@@ -57,8 +53,7 @@ export function ProfessionalExperience() {
         Office Depot
       </h2>
       {isShown4 && <OfficeDepot />}
-      <p>06/Oct/2021 - 27/Jul/2012</p>
-      <p>Process assistant</p>
+      <p>06/Oct/2021 - 27/Jul/2012: Process assistant</p>
 
       <br />
       <h2
@@ -68,8 +63,7 @@ export function ProfessionalExperience() {
         King Dominion - US
       </h2>
       {isShown5 && <KingsDominion />}
-      <p>28/Jun/2008 - 26/Sep/2008</p>
-      <p>Game Host</p>
+      <p>28/Jun/2008 - 26/Sep/2008: Game Host</p>
 
       <br />
     </div>
