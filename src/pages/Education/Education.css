@@ -9,3 +9,15 @@
   color: white;
   padding: 10px;
 }
+
+.education-container img {
+  width: 120px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.education-container .fsega {
+  height: 113.672px;
+}
+.education-container img:hover {
+  box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.42);
+}

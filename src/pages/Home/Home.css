@@ -11,9 +11,14 @@
   align-items: center;
   border-radius: 50%;
 }
-
+.home-container img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 .what-I-do {
   width: 100%;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @media (max-width: 500px) {

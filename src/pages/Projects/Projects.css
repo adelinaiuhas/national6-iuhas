@@ -18,3 +18,45 @@
 .projects-container p {
   font-size: 20px;
 }
+.projects-container img:hover {
+  animation: rotate 0.5s 1;
+}
+
+@keyframes rotate {
+  10% {
+    transform: rotate(30deg);
+  }
+  20% {
+    transform: rotate(60deg);
+  }
+  20% {
+    transform: rotate(90deg);
+  }
+  30% {
+    transform: rotate(120deg);
+  }
+  40% {
+    transform: rotate(150deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(210deg);
+  }
+  70% {
+    transform: rotate(240deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  80% {
+    transform: rotate(300deg);
+  }
+  90% {
+    transform: rotate(330deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,21 +1,43 @@
 .contact-container {
   border-radius: 20px;
-  height: 50%;
-  width: 50%;
-  margin-left: 10%;
-  margin-top: 25px;
+  height: fit-content;
+  width: fit-content;
+  margin-left: 35%;
+  margin-top: 10%;
   margin-bottom: 25px;
+  margin-right: 35%;
   background-color: rgb(56, 151, 163);
   color: white;
-  padding: 10px;
-  text-align: center;
+  padding: 20px;
+  align-items: flex-start;
 }
+
 .contact-container label {
   display: block;
   padding: 20px;
 }
-.contact-container .btn {
+.contact-container input,
+textarea {
+  margin-left: 20px;
   display: block;
+}
+
+.contact-container .btn {
   padding: 10px;
-  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .contact-container label {
+    padding: 20px;
+    display: initial;
+  }
+  .contact-container input,
+  textarea {
+    width: 80%;
+  }
+  .contact-container {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 150px;
+  }
 }
