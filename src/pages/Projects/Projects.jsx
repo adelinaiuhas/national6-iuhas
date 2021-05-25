@@ -47,7 +47,12 @@ export function Projects() {
       <br />
       <h2>Programming project - My Online CV</h2>
       <a href="https://compassionate-raman-d3be72.netlify.app/" target="_blank">
-        <img src={myCV} className="my-cv" alt="Adelina Iuhas CV" />
+        <img
+          src={myCV}
+          className="my-cv"
+          alt="Adelina Iuhas CV"
+          rel="noreferrer"
+        />
       </a>
     </div>
   );
