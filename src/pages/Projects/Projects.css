@@ -1,12 +1,14 @@
 .projects-container {
   border-radius: 20px;
   width: 80%;
+  height: 80%;
   margin-left: 10%;
   margin-top: 25px;
   margin-bottom: 25px;
   background-color: rgb(56, 151, 163);
   color: white;
   padding: 10px;
+  overflow: auto;
 }
 .level {
   align-items: center;
@@ -59,4 +61,8 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.projects-container .my-cv {
+  width: 120px;
+  border-radius: 25px;
 }

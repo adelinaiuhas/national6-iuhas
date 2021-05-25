@@ -3,6 +3,7 @@ import html from "./html5.svg";
 import css from "./css-3.svg";
 import js from "./java-script-logo.svg";
 import react from "./logo.svg";
+import myCV from "./me.jpg";
 export function Projects() {
   return (
     <div className="projects-container">
@@ -44,7 +45,10 @@ export function Projects() {
       />
       <hr style={{ width: "40%" }} />
       <br />
-      <h2>Programming project</h2>
+      <h2>Programming project - My Online CV</h2>
+      <a href="https://compassionate-raman-d3be72.netlify.app/" target="_blank">
+        <img src={myCV} className="my-cv" alt="Adelina Iuhas CV" />
+      </a>
     </div>
   );
 }

@@ -9,6 +9,7 @@
   color: white;
   padding: 10px;
   text-align: center;
+  overflow: auto;
 }
 
 .experience-container p {
@@ -17,4 +18,18 @@
 
 .experience-container h2:hover {
   color: black;
+}
+
+.collapse-button {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.collapse-content.collapsed {
+  display: none;
+}
+
+.collapsed-content.expanded {
+  display: block;
 }

@@ -3,7 +3,8 @@
   margin-right: 40%;
   margin-top: 10%;
   font-size: large;
-  color: rgb(3, 120, 167);
+  color: white;
+  overflow: auto;
 }
 
 .home-container img {

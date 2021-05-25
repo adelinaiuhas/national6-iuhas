@@ -8,6 +8,7 @@
   background-color: rgb(56, 151, 163);
   color: white;
   padding: 10px;
+  overflow: auto;
 }
 
 .logo {

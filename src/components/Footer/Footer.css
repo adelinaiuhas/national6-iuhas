@@ -10,3 +10,8 @@
   display: block;
   background-color: rgb(56, 151, 163);
 }
+@media (max-width: 600px) {
+  .cv-footer {
+    position: relative;
+  }
+}
