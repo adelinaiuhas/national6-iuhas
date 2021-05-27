@@ -66,3 +66,9 @@
   width: 120px;
   border-radius: 25px;
 }
+
+.projects-container hr {
+  height: 7px;
+  background-color: white;
+  opacity: 1;
+}
