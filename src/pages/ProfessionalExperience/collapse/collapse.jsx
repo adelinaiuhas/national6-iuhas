@@ -16,6 +16,7 @@ function CollapsiblePanel({ children, ...props }) {
 
   useEffect(() => {
     toggle();
+    // eslint-disable-next-line
   }, [collapse]);
 
   return (
