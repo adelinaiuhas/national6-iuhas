@@ -14,6 +14,10 @@ function CollapsiblePanel({ children, ...props }) {
     });
   };
 
+  useEffect(() => {
+    toggle();
+  }, [collapse]);
+
   return (
     <div className="coll-panel own">
       <button
@@ -30,5 +34,9 @@ function CollapsiblePanel({ children, ...props }) {
     </div>
   );
 }
-
+CollapsiblePanel.defaultProps = {
+  children: "Add node as a child",
+  title: "Collapsible Panel",
+  collapse: true,
+};
 export default CollapsiblePanel;
