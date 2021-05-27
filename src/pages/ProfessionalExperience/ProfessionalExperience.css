@@ -12,24 +12,7 @@
   overflow: auto;
 }
 
-.experience-container p {
-  font-size: 18px;
-}
-
-.experience-container h2:hover {
-  color: black;
-}
-
-.collapse-button {
-  display: block;
-  width: 30px;
-  height: 30px;
-}
-
-.collapse-content.collapsed {
-  display: none;
-}
-
-.collapsed-content.expanded {
-  display: block;
+.coll-panel-btn:focus {
+  outline: 0;
+  box-shadow: none;
 }
