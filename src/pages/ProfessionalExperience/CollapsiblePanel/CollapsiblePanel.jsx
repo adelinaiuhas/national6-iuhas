@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Collapse } from "reactstrap";
-import "./Collapse.css";
+import "./CollapsiblePanel.css";
 function CollapsiblePanel({ children, ...props }) {
   const { title, collapse } = props;
   const [isCollapse, setIsCollapse] = useState(collapse);

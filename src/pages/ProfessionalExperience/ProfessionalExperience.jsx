@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CollapsiblePanel from "./Collapse/Collapse";
+import CollapsiblePanel from "./CollapsiblePanel/CollapsiblePanel";
 import "./ProfessionalExperience.css";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
