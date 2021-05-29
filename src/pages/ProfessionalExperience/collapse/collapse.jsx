@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Collapse } from "reactstrap";
-
+import "./Collapse.css";
 function CollapsiblePanel({ children, ...props }) {
   const { title, collapse } = props;
   const [isCollapse, setIsCollapse] = useState(collapse);
@@ -20,14 +20,14 @@ function CollapsiblePanel({ children, ...props }) {
   }, [collapse]);
 
   return (
-    <div className="coll-panel own">
+    <div className="coll-panel">
       <button
+        id="adjusted-style"
         type="button"
         className="coll-panel-btn btn-primary btn-block text-left"
         onClick={() => toggle()}
       >
-        {/* <i className={icon} /> {title} */}
-        <h2 className={icon}>{title}</h2>
+        <h4 className={icon}>{title}</h4>
       </button>
       <Collapse className="border text-left p-2" isOpen={isCollapse}>
         {children}

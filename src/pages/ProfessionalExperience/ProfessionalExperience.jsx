@@ -1,8 +1,6 @@
-import "./ProfessionalExperience.css";
 import React, { useState } from "react";
-
-import CollapsiblePanel from "./collapse/collapse";
-
+import CollapsiblePanel from "./Collapse/Collapse";
+import "./ProfessionalExperience.css";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export function ProfessionalExperience() {
@@ -22,16 +20,17 @@ export function ProfessionalExperience() {
   };
   return (
     <div className="experience-container">
-      {/* Expand/Collapse All */}
+      {/* Collapse/Expand All */}
       <button
+        id="my-style"
         type="button"
         className="btn-warning mt-4 mb-3 float-left"
         onClick={collapseAll}
       >
         <i className={icon} /> {title}
       </button>
-      <CollapsiblePanel className="my-style" title="Plexus" collapse={collapse}>
-        <h4>Period</h4>
+      <CollapsiblePanel title="Plexus" collapse={collapse}>
+        <h4>Period & Job title</h4>
         <p>01/Aug/2019 - Ongoing: Demand analyst SR </p>
         <p>04/Apr/2017 - 31/Jul/2019: Demand analyst II</p>
         <h4>Location</h4>
@@ -67,7 +66,7 @@ export function ProfessionalExperience() {
         </p>
       </CollapsiblePanel>
       <CollapsiblePanel title="Celestica IPC" collapse={collapse}>
-        <h4>Period</h4>
+        <h4>Period & Job title</h4>
         <p>28/Apr/2016 - 31/Mar/2017: Commodity management analyst</p>
         <p>07/Jan/2015 - 28/Apr/2016: Commodity management associate</p>
         <h4>Location</h4>
@@ -95,7 +94,7 @@ export function ProfessionalExperience() {
         </p>
       </CollapsiblePanel>
       <CollapsiblePanel title="Shinheung Electronics" collapse={collapse}>
-        <h4>Period</h4>
+        <h4>Period & Job title</h4>
         <p>09/Apr/2021 - 05/Jan/2015: Buyer</p>
         <h4>Location</h4>
         <p>Oradea, Romania</p>
@@ -110,7 +109,7 @@ export function ProfessionalExperience() {
         <p>particularities of the groups of materials purchased by me.</p>
       </CollapsiblePanel>
       <CollapsiblePanel title="Office Depot" collapse={collapse}>
-        <h4>Period</h4>
+        <h4>Period & Job title</h4>
         <p>06/Oct/2021 - 27/Jul/2012: Process assistant</p>
         <h4>Location</h4>
         <p>Cluj-Napoca, Romania</p>
@@ -122,7 +121,7 @@ export function ProfessionalExperience() {
         <p>with the agreed payment terms.</p>
       </CollapsiblePanel>
       <CollapsiblePanel title="King Dominion" collapse={collapse}>
-        <h4>Period</h4>
+        <h4>Period & Job title</h4>
         <p>28/Jun/2008 - 26/Sep/2008: Game Host</p>
         <h4>Location</h4>
         <p>Richmond, VR, US</p>

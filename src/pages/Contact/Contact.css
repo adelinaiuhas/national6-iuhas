@@ -1,6 +1,6 @@
 .contact-container {
   border-radius: 20px;
-  height: fit-content;
+  height: 80%;
   width: fit-content;
   margin-left: 35%;
   margin-top: 25px;
@@ -21,24 +21,35 @@
 textarea {
   margin-left: 20px;
   display: block;
+  margin-top: 25px;
 }
 
 .contact-container .btn {
   padding: 10px;
+  color: white;
+  border: 1px solid;
 }
 
 @media (max-width: 500px) {
+  .contact-container {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 200px;
+  }
   .contact-container label {
     padding: 20px;
-    display: initial;
+    display: contents;
+    margin-left: 0;
   }
   .contact-container input,
   textarea {
     width: 80%;
   }
-  .contact-container {
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 150px;
+
+  .contact-container .btn {
+    padding: 10px;
+    color: white;
+    border: 1px solid;
+    margin-top: 20px;
   }
 }

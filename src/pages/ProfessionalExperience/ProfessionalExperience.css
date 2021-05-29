@@ -16,3 +16,11 @@
   outline: 0;
   box-shadow: none;
 }
+
+#my-style {
+  background-color: rgb(56, 151, 163);
+  border-color: rgb(8, 184, 184);
+  padding: 5px;
+  box-shadow: 0 0 0 0.25rem rgb(14 204 204 / 50%);
+  color: white;
+}

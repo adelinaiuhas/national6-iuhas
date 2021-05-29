@@ -22,8 +22,10 @@ export class Contact extends Component {
   render() {
     return (
       <div className="contact-container">
+        <br />
         <h2>Contact me</h2>
         <form onSubmit={this.handleSubmit}>
+          <br />
           <label>
             Name:
             <input
@@ -31,6 +33,7 @@ export class Contact extends Component {
               value={this.state.value}
               onChange={this.handleChange}
             />
+            <br />
           </label>
           <label>
             Email:
@@ -40,10 +43,12 @@ export class Contact extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <br />
           <label>
             Message:
             <textarea value={this.state.value} onChange={this.handleChange} />
           </label>
+          <br />
           <input type="submit" value="Submit" className="btn" />
         </form>
       </div>
