@@ -1,57 +1,37 @@
-import { Component } from "react";
+import emailjs from "emailjs-com";
 import "./Contact.css";
 
-export class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
+export function Contact() {
+  function sendEmail(e) {
+    e.preventDefault();
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    emailjs
+      .sendForm(
+        "service_webwn3y",
+        "contact_form",
+        e.target,
+        "user_bQLqnKyovbGM9w7uePM0F"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    // alert("A name was submitted: " + this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <div className="contact-container">
-        <br />
-        <h2>Contact me</h2>
-        <form onSubmit={this.handleSubmit}>
-          <br />
-          <label>
-            Name:
-            <input
-              type="text"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />
-            <br />
-          </label>
-          <label>
-            Email:
-            <input
-              type="Email"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <label>
-            Message:
-            <textarea value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <br />
-          <input type="submit" value="Submit" className="btn" />
-        </form>
-      </div>
-    );
-  }
+  return (
+    <form className="contact-container" onSubmit={sendEmail}>
+      <input type="hidden" name="contact_number" />
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
+  );
 }
